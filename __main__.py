@@ -1,5 +1,5 @@
 """An Azure RM Python Pulumi program"""
-
+# link to github https://github.com/palmierie11/clco-demo
 import pulumi
 from pulumi import AssetArchive, FileAsset
 from pulumi_azure_native import resources, storage, web
@@ -28,7 +28,7 @@ blob_container = storage.BlobContainer(
     account_name=storage_account.name
 )
 
-# Upload the archive as a Blob (this should be uploaded after the container is created)
+# Upload the archive as a Blob
 app_blob = storage.Blob(
     "app-blob",
     resource_group_name=resource_group.name,
